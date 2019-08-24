@@ -15,8 +15,8 @@ class Page extends CI_Controller{
 
 	function index(){
 		//Allowing akses to admin only
-		if($this->session->userdata('akses')=='1'){
-			$this->load->view('admindashboard_view');
+		if($this->session->userdata('akses')=='2'){
+			$this->load->view('home_view');
 		}else{
 			echo "Anda tidak berhak mengakses halaman ini";
 		}

@@ -34,8 +34,8 @@ class Login extends CI_Controller{
 				$this->session->set_userdata('akses','2');
 				$this->session->set_userdata('ses_id',$data['user_id']);
 				$this->session->set_userdata('ses_nama',$data['user_name']);
-				// redirect('page/mahasiswa_dashboard');
-				redirect(site_url('page/home'));
+				redirect('page');
+
 			}else{  // jika username dan password tidak ditemukan atau salah
 				$url=base_url();
 				echo $this->session->set_flashdata('msg','Username Atau Password Salah');
